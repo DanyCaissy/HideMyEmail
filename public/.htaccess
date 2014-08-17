@@ -1,0 +1,36 @@
+Allow from 127.0.0.1
+Allow from ::1
+
+AddHandler cgi-script .pl .cgi
+Options +ExecCGI +FollowSymLinks
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /index.php [QSA]
+
+
+# BEGIN EXPIRES
+<IfModule mod_expires.c>
+  ExpiresActive on
+
+    ExpiresDefault "access plus 3 days"
+
+# Your document html
+  ExpiresByType text/html "access plus 3 days"
+
+# Media: images, video, audio
+  ExpiresByType audio/ogg "access plus 3 days"
+  ExpiresByType image/gif "access plus 3 days"
+  ExpiresByType image/jpeg "access plus 3 days"
+  ExpiresByType image/png "access plus 3 days"
+  ExpiresByType video/mp4 "access plus 3 days"
+  ExpiresByType video/ogg "access plus 3 days"
+  ExpiresByType video/webm "access plus 3 days"
+
+# CSS and JavaScript
+  ExpiresByType application/javascript "access plus 3 days"
+  ExpiresByType text/css "access plus 3 days"
+</IfModule>
+# END EXPIRES
+
