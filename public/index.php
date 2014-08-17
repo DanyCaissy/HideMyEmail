@@ -40,7 +40,7 @@
         $connectionInfo = array(
             "host" => "127.0.0.1",
             "user" => "hidemyem_user",
-            "password" => "MyPassword",
+            "password" => "Rawrrawr00X",
             "database" => "hidemyem_ail",
             "port" => null,
             "socket" => null
