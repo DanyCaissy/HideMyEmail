@@ -18,11 +18,10 @@
     require_once "../app/models/settings.php";
     require_once "../app/lib/mobiledetect/mobile_detect.php";
 
-    $production = false;
-    if (gethostname() == 'server1.websitehostserver.net')
-    {
-        $production = true;
-    }
+    $localHostNames = array('Zalaeth-PC');
+    $hostName = gethostname();
+
+    $production = !in_array($hostName, $localHostNames);
 
     if ($production && stringContains($_SERVER['SERVER_NAME'], "www."))
     {
@@ -39,9 +38,9 @@
     {
         $connectionInfo = array(
             "host" => "127.0.0.1",
-            "user" => "hidemyem_user",
-            "password" => "Rawrrawr00X",
-            "database" => "hidemyem_ail",
+            "user" => "user",
+            "password" => "user_rawr",
+            "database" => "hidemyemail",
             "port" => null,
             "socket" => null
         );
