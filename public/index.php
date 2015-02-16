@@ -39,8 +39,8 @@
         $connectionInfo = array(
             "host" => "127.0.0.1",
             "user" => "user",
-            "password" => "user_rawr",
-            "database" => "hidemyemail",
+            "password" => "password",
+            "database" => "database",
             "port" => null,
             "socket" => null
         );
