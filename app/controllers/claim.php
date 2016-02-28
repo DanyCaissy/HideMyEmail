@@ -2,7 +2,6 @@
 
     require_once "../app/models/emails.php";
     require_once "../app/models/claims.php";
-    require_once "../app/lib/playthru/ayah.php";
 
     $emailModel = new Emails($data['dataConnection']);
     $claimModel = new Claims($data['dataConnection']);
@@ -14,8 +13,6 @@
         $emailAddress = $email['address'];
     }
 
-    $ayah = new AYAH();
-
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
         if ($_POST['email'])
@@ -26,9 +23,12 @@
 
             if ($email)
             {
-                $score = $ayah->scoreResult();
+                require_once "../app/lib/recaptcha/autoload.php";
 
-                if ($score)
+                $recaptcha = new \ReCaptcha\ReCaptcha("6LcFghkTAAAAAJNH7BpXti8yAOFuld3kf8e9qIoQ");
+                $resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+
+                if ($resp->isSuccess())
                 {
                     $claimModel->add($email['id'], $data['sessionId']);
 

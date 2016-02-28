@@ -17,6 +17,7 @@
     require_once "../app/models/sessions.php";
     require_once "../app/models/settings.php";
     require_once "../app/lib/mobiledetect/mobile_detect.php";
+    require_once "../public/config.php";
 
     $localHostNames = array('Zalaeth-PC');
     $hostName = gethostname();
@@ -36,25 +37,11 @@
 
     if ($production)
     {
-        $connectionInfo = array(
-            "host" => "127.0.0.1",
-            "user" => "user",
-            "password" => "password",
-            "database" => "database",
-            "port" => null,
-            "socket" => null
-        );
+        $connectionInfo = $productionCredentials; // From config.php
     }
     else
     {
-        $connectionInfo = array(
-            "host" => "127.0.0.1",
-            "user" => "user",
-            "password" => "user",
-            "database" => "hidemyemail",
-            "port" => null,
-            "socket" => null
-        );
+        $connectionInfo = $localCredentials; // From config.php
     }
 
     $dataConnection = new MysqlImproved_Driver();
@@ -97,7 +84,7 @@
     {
         $app->render
         (
-            'main.php', array('app' => $app, 'title' => 'Hide my email from spammers', 'ads' => false,
+            'main.php', array('app' => $app, 'title' => 'Hide my email from spammers', 'ads' => true,
                                              'meta_description' => 'Protect your email address from spammers with our safe, minified URL.',
                                              'background' => 'homepage_background', 'canonical' => 'http://' . $_SERVER["SERVER_NAME"])
         );
@@ -107,7 +94,7 @@
     {
         $app->render
             (
-                'main.php', array('app' => $app, 'title' => 'Hide my email from spammers', 'ads' => false,
+                'main.php', array('app' => $app, 'title' => 'Hide my email from spammers', 'ads' => true,
                                                   'meta_description' => 'Protect your email address from spammers with our safe, minified URL.',
                                                   'background' => 'homepage_background', 'canonical' => 'http://' . $_SERVER["SERVER_NAME"])
             );

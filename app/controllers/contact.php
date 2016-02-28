@@ -2,7 +2,6 @@
 
     require_once "../app/models/emails.php";
     require_once "../app/models/claims.php";
-    require_once "../app/lib/playthru/ayah.php";
 
     $emailModel = new Emails($data['dataConnection']);
     $claimModel = new Claims($data['dataConnection']);
@@ -16,7 +15,6 @@
 
     $emailAddress = null;
     $message = null;
-    $ayah = new AYAH();
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
@@ -29,11 +27,14 @@
             {
                 if ($message)
                 {
-                    $score = $ayah->scoreResult();
+                    require_once "../app/lib/recaptcha/autoload.php";
 
-                    if ($score)
+                    $recaptcha = new \ReCaptcha\ReCaptcha("6LcFghkTAAAAAJNH7BpXti8yAOFuld3kf8e9qIoQ");
+                    $resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+
+                    if ($resp->isSuccess())
                     {
-                        plainMail("support@hidemyemail.co", "You've received an email from $emailAddress", $message, $emailAddress);
+                        plainMail("danycaissy@gmail.com", "You've received an email from $emailAddress", $message, $emailAddress);
                         $successMessage = "We've received your email and you should hear from us soon!";
                     }
                     else

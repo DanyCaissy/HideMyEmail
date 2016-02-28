@@ -48,6 +48,8 @@
         <!-- Nibbler -->
         <meta name="nibbler-site-verification" content="a340aec259677f4215f1f1859988d6772fe67213" />
 
+        <meta name="google-site-verification" content="brpSUFUNstJGB--f1P8TA21BPCcHDWvISg8nnGPCtpU" />
+
         <!-- Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -60,6 +62,8 @@
             ga('send', 'pageview');
 
         </script>
+
+        <script src='https://www.google.com/recaptcha/api.js'></script>
 
     </head>
     <body class="<?php echo $data['background']; ?>" style="background-color:black;">

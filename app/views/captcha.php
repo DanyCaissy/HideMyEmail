@@ -18,7 +18,7 @@
     <form method="POST" >
 
         <div class="text-center">
-            <?php echo $ayah->getPublisherHTML(); ?>
+            <div class="g-recaptcha" data-sitekey="6LcFghkTAAAAAOvNSMyulu0Icfc0IAq3ST47IV4X" style="margin: 0 auto;  width: 304px;"></div>
 
             <br />
             <br />

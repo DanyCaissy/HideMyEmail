@@ -15,6 +15,7 @@
     $emailURL = $_SERVER['SERVER_NAME']  . "/e/" . $email['alias'];
 
     $noIndex = true;
+    $captchaSuccess = false;
 
     require_once "../app/views/header.php";
 
@@ -24,16 +25,16 @@
     }
     else if ($email['captcha'])
     {
-        require_once "../app/lib/playthru/ayah.php";
-
-        $ayah = new AYAH();
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST')
         {
-            $score = $ayah->scoreResult();
+            require_once "../app/lib/recaptcha/autoload.php";
 
-            if ($score)
+            $recaptcha = new \ReCaptcha\ReCaptcha("6LcFghkTAAAAAJNH7BpXti8yAOFuld3kf8e9qIoQ");
+            $resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+
+            if ($resp->isSuccess())
             {
+                $captchaSuccess = true;
                 $emailModel->addView($email['id']);
                 require_once "../app/views/email.php";
             }

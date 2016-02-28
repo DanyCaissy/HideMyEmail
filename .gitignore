@@ -39,3 +39,4 @@ Icon
 *.name
 .idea
 database.sql
+public/config.php

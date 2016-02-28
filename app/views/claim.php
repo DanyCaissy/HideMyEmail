@@ -33,9 +33,7 @@
 
     <form method="POST" class="form-horizontal">
 
-        <div class="text-center">
-            <?php echo $ayah->getPublisherHTML(); ?>
-        </div>
+        <div class="g-recaptcha" data-sitekey="6LcFghkTAAAAAOvNSMyulu0Icfc0IAq3ST47IV4X" style="margin: 0 auto;  width: 304px;"></div>
 
         <br />
         <br />

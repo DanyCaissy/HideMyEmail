@@ -4,13 +4,25 @@
             <footer class="container" style="margin-top:40px; text-align:center;" class="text-center">
 
                 <?php if ($data['isMobile']): ?>
-                    <a href="http://hidemyass.com/vpn/r17412/" title="Hide My Ass! Pro VPN">
-                        <img src="//d1piupybsgr6dr.cloudfront.net/ads/set2/foursixtyeightsixty.gif" alt="HideMyAss.com">
-                    </a>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- hidemyemail_footer -->
+                        <ins class="adsbygoogle"
+                             style="display:inline-block;width:728px;height:90px"
+                             data-ad-client="ca-pub-6625924202531009"
+                             data-ad-slot="9939307508"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                 <?php else: ?>
-                    <a href="http://hidemyass.com/vpn/r17412/" title="Hide My Ass! Pro VPN">
-                        <img src="//d1piupybsgr6dr.cloudfront.net/ads/set2/seventwentyeightninety.gif" alt="HideMyAss.com">
-                    </a>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- hidemyemail_footer -->
+                        <ins class="adsbygoogle"
+                             style="display:inline-block;width:728px;height:90px"
+                             data-ad-client="ca-pub-6625924202531009"
+                             data-ad-slot="9939307508"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                 <?php endif;?>
 
             </footer>
