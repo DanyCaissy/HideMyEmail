@@ -46,7 +46,6 @@
                     <label for="inputEmail" class="control-label">Manage your email:</label>
                     <div>
                         <input class="form-control" onclick="this.select();"  value="<?php echo $shortManageURL; ?>" id="inputEmail" type="text" readonly>
-                        <input class="btn btn-default copy-clipboard" data-copy="<?php echo $shortManageURL; ?>" type="button" value="Copy to clipboard" style="float:right;"/>
                     </div>
 
                     <br />
@@ -119,7 +118,6 @@
                     <label for="shortLink" class="control-label">For social networks, blog posts or anything else:</label>
                     <div>
                         <input class="form-control" onclick="this.select();"  value="<?php echo $shortEmailURL; ?>" id="shortLink" type="text" readonly>
-                        <input class="btn btn-default copy-clipboard" data-copy="<?php echo $shortEmailURL; ?>" type="button" value="Copy to clipboard" style="float:right;"/>
                     </div>
 
                     <br /><br />
@@ -127,7 +125,6 @@
                     <label for="htmlLink" class="control-label">For HTML links:</label>
                     <div>
                         <input class="form-control" onclick="this.select();"  value='<a href="<?php echo $emailURL; ?>">My email</a>' id="htmlLink" type="text" readonly>
-                        <input class="btn btn-default copy-clipboard" data-copy='<a href="<?php echo $emailURL; ?>">My email</a>' type="button" value="Copy to clipboard" style="float:right;"/>
                     </div>
 
                     <br /><br />
@@ -135,7 +132,6 @@
                     <label for="myForumLink" class="control-label">For forums:</label>
                     <div>
                         <input class="form-control" onclick="this.select();"  value="[URL=<?php echo $emailURL; ?>]My email[/URL]" id="myForumLink" type="text" readonly>
-                        <input class="btn btn-default copy-clipboard" data-copy="[URL=<?php echo $emailURL; ?>]My email[/URL]" type="button" value="Copy to clipboard" style="float:right;"/>
                     </div>
 
                 </div>

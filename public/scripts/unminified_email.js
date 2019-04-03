@@ -1,18 +1,4 @@
-function isFlashInstalled()
-{
-    if (navigator.plugins != null && navigator.plugins.length > 0){
-        return navigator.plugins["Shockwave Flash"] && true;
-    }
-    if(~navigator.userAgent.toLowerCase().indexOf("webtv")){
-        return true;
-    }
-    if(~navigator.appVersion.indexOf("MSIE") && !~navigator.userAgent.indexOf("Opera")){
-        try{
-            return new ActiveXObject("ShockwaveFlash.ShockwaveFlash") && true;
-        } catch(e){}
-    }
-    return false;
-}
+
 
 function checkAlphaNum(event)
 {
@@ -27,11 +13,6 @@ function checkAlphaNum(event)
 
 $( document ).ready(function()
 {
-    if (!isFlashInstalled())
-    {
-        $('.copy-clipboard').hide();
-    }
-
     // ============================== INDEX ==============================
 
     $("#specifyAlias").click(function()
@@ -53,30 +34,12 @@ $( document ).ready(function()
         $("#addressLink").prop("href", 'mailto:' + address);
         $("#addressLink").text(address);
 
-        $(".copy-clipboard").on('click', function (e) {
-            e.preventDefault();
-        }).each(function () {
-            $(this).zclip({
-                path: 'http://www.steamdev.com/zclip/js/ZeroClipboard.swf',
-                copy: function () {
-                    return $(this).data('copy');
-                }
-            });
-        });
+
     });
 
     // ============================== MANAGE ==============================
 
-    $(".copy-clipboard").on('click', function (e) {
-        e.preventDefault();
-    }).each(function () {
-        $(this).zclip({
-            path: 'http://www.steamdev.com/zclip/js/ZeroClipboard.swf',
-            copy: function () {
-                return $(this).data('copy');
-            }
-        });
-    });
+
 
     function submitManageForm()
     {

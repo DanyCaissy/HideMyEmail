@@ -14,9 +14,7 @@
             <span class="badge"><?php echo $email['views']; ?></span>
         </p>
 
-        <div class="text-center">
-            <input class="btn btn-default copy-clipboard" data-copy="<?php echo $email['address']; ?>" type="button" value="Copy to clipboard"/>
-        </div>
+
     </div>
 
     <?php if (!$captchaSuccess) : ?>

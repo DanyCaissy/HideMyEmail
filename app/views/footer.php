@@ -23,7 +23,7 @@
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
-                <?php endif;?>
+                <?php endif; ?>
 
             </footer>
 
@@ -67,9 +67,8 @@
 
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="/libraries/bootstrap/js/bootstrap.js"></script>
-        <script src="/libraries/zclip/zclip.min.js"></script>
 
-        <script src="/scripts/email.js"></script>
+        <script src="/scripts/unminified_email.js"></script>
 
 
     </body>
