@@ -101,7 +101,7 @@
                     <br />
                     <br />
 
-                    <div style="font-size:120%;">
+                    <div style="font-size:120%; style="display:none;">
                         <span class="pull-left" style="margin-top:6px;">Email me my information:</span>
                         <button type="button" class="btn btn-info pull-right" id="buttonEmail">Email</button>
                     </div>

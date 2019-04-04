@@ -75,28 +75,19 @@
                 </div>
                 <div class="navbar-collapse collapse" id="navbar-main">
 
+                    <?php /*
+
                     <ul class="nav navbar-nav">
                         <li>
                             <a href="<?php echo "http://" . $_SERVER['SERVER_NAME']  . "/claim/"; ?>">Reclaim</a>
                         </li>
                     </ul>
 
-                    <?php /*
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="">Hide email</a>
-                        </li>
-                        <li>
-                            <a href="">Shorten URL</a>
-                        </li>
-                    </ul>
-                    */ ?>
-
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="<?php echo "http://" . $_SERVER['SERVER_NAME']  . "/contact/"; ?>">Contact us</a>
                         </li>
-                    </ul>
+                    </ul> */ ?>
 
                 </div>
             </div>
