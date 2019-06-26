@@ -3,8 +3,7 @@
 
             <footer class="container" style="margin-top:40px; text-align:center;" class="text-center">
 
-                <a href="https://nordvpn.sjv.io/c/1353488/432244/7452"><img src="//a.impactradius-go.com/display-ad/7452-432244" border="0" alt="" width="728" height="90"/></a><img height="0" width="0" src="//nordvpn.sjv.io/i/1353488/432244/7452" style="position:absolute;visibility:hidden;" border="0" />
-
+                <a href="https://nordvpn.sjv.io/c/1353488/432246/7452"><img src="//a.impactradius-go.com/display-ad/7452-432246" border="0" alt="" width="970" height="250"/></a><img height="0" width="0" src="//nordvpn.sjv.io/i/1353488/432246/7452" style="position:absolute;visibility:hidden;" border="0" />
             </footer>
 
         <?php endif; ?>
